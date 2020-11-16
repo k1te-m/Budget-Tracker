@@ -1,4 +1,4 @@
-import { populateTotal, populateTable } from "./population";
+import { populateTotal, populateTable, populateChart } from "./population";
 let transactions = [];
 let myChart;
 
