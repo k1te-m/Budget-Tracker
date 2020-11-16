@@ -6,11 +6,10 @@ const config = {
 
   // add entry points for JavaScript files for the three pages, home, detail, and favorites.
   entry: {
-    app: "./public/index.js",
-    population: "./public/population.js"
+    app: "./assets/js/index.js",
   },
   output: {
-    path: __dirname + "/public/dist",
+    path: __dirname + "/dist",
     filename: "[name].bundle.js"
   },
   plugins: [
@@ -24,9 +23,9 @@ const config = {
       theme_color: "#ffffff",
       start_url: "/",
       icons: [{
-        src: path.resolve("public/icons/icon-192x192.png"),
+        src: path.resolve("assets/images/icons/icon-192x192.png"),
         sizes: [192, 512],
-        destination: path.join("public", "icons")
+        destination: path.join("assets", "icons")
       }]
     })
   ],
