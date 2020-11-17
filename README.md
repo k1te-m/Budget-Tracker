@@ -8,8 +8,6 @@
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
   * [Questions](#questions)
 
   ## Installation 
@@ -19,29 +17,14 @@
   In the root directory, type `npm i` to install all necessary packages. You will also need to create a MongoDB to connect the applicaiton to. 
 
   ## Usage
+  
+  Use the application to track your budget!
 
   *Examples of project use:*
 
   [https://thawing-crag-91029.herokuapp.com/](https://thawing-crag-91029.herokuapp.com/)
   
   ![Demo](./public/images/demo.PNG)
-
-  ## Contributing
-
-  *If you are interested in contributing to this project, please follow the below instructions:*
-
-  Pull requests not welcome at this time. 
-
-  ## Tests
-
-  *Application tests and instructions for them:*
-
-  N/A
-
-  ## License
-
-  None
-  
 
   ## Questions
 
