@@ -22,7 +22,9 @@
 
   *Examples of project use:*
 
-  Will Update
+  [https://thawing-crag-91029.herokuapp.com/](https://thawing-crag-91029.herokuapp.com/)
+  
+  ![Demo](./public/images/demo.PNG)
 
   ## Contributing
 
