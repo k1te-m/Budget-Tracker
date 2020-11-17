@@ -42,6 +42,7 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  // cache any successful get requests
   if (event.request.url.includes("/api/") && event.request.method === "GET") {
     event.respondWith(
       caches
@@ -50,11 +51,13 @@ self.addEventListener("fetch", (event) => {
           return fetch(event.request)
             .then((response) => {
               if (response.status === 200) {
+                // if response OK, code 200, clone and store to the cache 
                 cache.put(event.request, response.clone());
               }
               return response;
             })
             .catch(() => {
+              // Response failed request, attempt to retrieve from cache
               return cache.match(event.request);
             });
         })
@@ -62,7 +65,7 @@ self.addEventListener("fetch", (event) => {
     );
     return;
   }
-
+  // If not an API request, serve static assets
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request);
