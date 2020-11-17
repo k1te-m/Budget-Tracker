@@ -17,6 +17,8 @@
   In the root directory, type `npm i` to install all necessary packages. You will also need to create a MongoDB to connect the applicaiton to. 
 
   ## Usage
+  
+  Use the application to track your budget!
 
   *Examples of project use:*
 
