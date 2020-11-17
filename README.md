@@ -26,23 +26,6 @@
   
   ![Demo](./public/images/demo.PNG)
 
-  ## Contributing
-
-  *If you are interested in contributing to this project, please follow the below instructions:*
-
-  Pull requests not welcome at this time. 
-
-  ## Tests
-
-  *Application tests and instructions for them:*
-
-  N/A
-
-  ## License
-
-  None
-  
-
   ## Questions
 
   *If you have any questions regarding this application, please utilize the below contact information:*
