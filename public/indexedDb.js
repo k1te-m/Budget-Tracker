@@ -1,3 +1,4 @@
+// Browser compatability for indexedDB
 const indexedDB =
   window.indexedDB ||
   window.mozIndexedDB ||
@@ -7,6 +8,7 @@ const indexedDB =
 
 let db;
 
+// create a new request for indexedDB "budgetTracker" database
 const request = indexedDB.open("budgetTracker", 1);
 
 request.onupgradeneeded = (event) => {
@@ -15,6 +17,7 @@ request.onupgradeneeded = (event) => {
         autoIncrement: true
     });
 };
+
 
 request.onerror = (error) => {
     console.log(error);
@@ -28,17 +31,24 @@ request.onsuccess = (event) => {
     }
 }
 
+// Called in index.js when offline
 function saveRecord(record) {
+    // Creates "pending" objectStore with readwrite access
     const transaction = db.transaction("pending", "readwrite");
     const store = transaction.objectStore("pending");
+    // add the record to the pending object store
     store.add(record);
 }
 
+// called when connection is re-established
 function checkBudgetDB() {
+    // opens a transaction on the pending db with readwrite access
+    // Gets all Records from store
     const transaction = db.transaction("pending", "readwrite");
     const store = transaction.objectStore("pending");
     const getAll = store.getAll();
 
+    // on success, open a transaction in the pending db, then clear
     getAll.onsuccess = () => {
         if (getAll.result.length > 0) {
             fetch("/api/transaction/bulk", {
@@ -58,3 +68,6 @@ function checkBudgetDB() {
         }
     }
 }
+
+// listen for app coming back online
+window.addEventListener("online", checkDatabase);
