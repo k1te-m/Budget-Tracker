@@ -2,7 +2,7 @@
 
   ![GitHub](https://img.shields.io/github/license/k1te-m/Budget-Tracker)![GitHub top language](https://img.shields.io/github/languages/top/k1te-m/Budget-Tracker)
 
-  ## Descripton
+  ## Description
   Created a PWA from provided front-end and back-end files for a budget tracking app. This application is currently deployed on Heroku and is connected to a Mongo Database hosted via Atlas: MongoDB. In addition, the applicaiton has been given offline functionality through the use of the IndexedDB and a service worker. 
 
   ## Table of Contents
